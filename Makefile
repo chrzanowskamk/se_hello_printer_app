@@ -14,3 +14,6 @@ test_verbose:
 
 lint:
 	flake8 hello_world test
+	
+docker build:
+	docker build -t hello-world-printer .
