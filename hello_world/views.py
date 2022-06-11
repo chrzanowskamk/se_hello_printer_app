@@ -7,14 +7,14 @@ moje_imie = "Gosia"
 msg = "Hello World!"
 
 
-
 @app.route('/')
 def index():
     output = request.args.get('output')
     if not output:
         output = PLAIN
     return get_formatted(msg, moje_imie,
-        output.lower())
+                         output.lower())
+
 
 @app.route('/outputs')
 def supported_output():
